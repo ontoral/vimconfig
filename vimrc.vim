@@ -25,9 +25,12 @@ set wildmenu
 
 " Pathogen
 execute pathogen#infect()
+
+" NERDTree
 autocmd vimenter * NERDTree
+let NERDTreeIgnore = ['\~$', '\.pyc[[file]]']
+let NERDTreeWinSize = 20
 
 " Suggested
 "syntax on
 "filetype plugin indent on
-
