@@ -30,6 +30,7 @@ execute pathogen#infect()
 autocmd vimenter * NERDTree
 let NERDTreeIgnore = ['\~$', '\.pyc[[file]]']
 let NERDTreeWinSize = 20
+let NERDTreeDirArrows = 0
 
 " Suggested
 "syntax on
