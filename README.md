@@ -7,8 +7,7 @@ To use:
 
 ```
 git clone git@github.com:ontoral/vimconfig.git ~/.vim
-cd ~/.vim
-mv .vimrc ~
+ln -s ~/.vimrc ~/.vim/.vimrc
 git submodule update --init ~/.vim/bundle/nerdtree
 git submodule update --init ~/.vim/bundle/vim-fugitive
 ```
