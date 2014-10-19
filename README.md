@@ -1,7 +1,7 @@
 vimconfig
 =========
 
-A repository of Vim editor settings a packages (~/.vim).
+A repository of Vim editor settings and packages (~/.vim).
 
 To use:
 
