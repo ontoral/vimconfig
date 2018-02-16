@@ -57,7 +57,7 @@ iabbrev #n #include <numeric>
 iabbrev #q #include <queue>
 iabbrev #r #include <random>
 iabbrev #u #include <utility>
-iabbrev #um #include <unordered_map>
+iabbrev #m #include <unordered_map>
 iabbrev #v #include <vector>
 iabbrev iuns using namespace std;
 iabbrev imain int main(int /*argc*/, char */*argv*/[]) {<cr>    return 0;<cr>}
