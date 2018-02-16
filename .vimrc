@@ -1,8 +1,8 @@
 " Take me to your leader...
 let mapleader = ","
 
-" Editing this file
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+" Edit this file
+nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Spacing and rulers
@@ -66,6 +66,22 @@ iabbrev imain int main(int /*argc*/, char */*argv*/[]) {<cr>    return 0;<cr>}
 "syntax on
 "filetype plugin indent on
 
+" Abbreviations
+iabbrev #a #include <algorithm>
+iabbrev #d #include <deque>
+iabbrev #f #include <functional>
+iabbrev #i #include <iostream>
+iabbrev #l #include <limits>
+iabbrev #n #include <numeric>
+iabbrev #q #include <queue>
+iabbrev #r #include <random>
+iabbrev #s #include <string>
+iabbrev #u #include <utility>
+iabbrev #v #include <vector>
+
+iabbrev insp using namespace std;
+iabbrev imain int main(int /*argc*/, char */*argv*/[]) {<cr>    return 0;<cr>}
+
 function! s:ExecuteInShell(command)
   let command = join(map(split(a:command), 'expand(v:val)'))
   let winnr = bufwinnr('^' . command . '$')
@@ -81,4 +97,3 @@ function! s:ExecuteInShell(command)
 endfunction
 command! -complete=shellcmd -nargs=+ Shell call s:ExecuteInShell(<q-args>)
 ca shell Shell
-
