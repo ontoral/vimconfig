@@ -1,6 +1,7 @@
 set lines=40
 set columns=132
 set guifont=M+\ 1m\ Regular:h18
+set colorcolumn=78
 
 colorscheme slate
 
