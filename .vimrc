@@ -1,3 +1,10 @@
+" Take me to your leader...
+let mapleader = ","
+
+" Editing this file
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Spacing and rulers
 set tabstop=4
 set shiftwidth=4
@@ -7,13 +14,14 @@ set smartindent
 
 " Syntax, colors, and fonts
 set bg=dark
-set syntax=python
+syntax on
 
 " Window embellishments
 set modeline
 set ls=2
 set ruler
 set number
+set colorcolumn=78
 
 " Editor behavior
 set hidden
@@ -23,14 +31,36 @@ set backspace=indent,eol,start
 set wildmode=longest,list,full
 set wildmenu
 
+" Movement
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-N> gT
+map <C-M> gt
+
 " Pathogen
 execute pathogen#infect()
 
 " NERDTree
 autocmd vimenter * NERDTree
-let NERDTreeIgnore = ['\~$', '\.pyc[[file]]']
+let NERDTreeIgnore = ['\~$', '\.pyc[[file]]', '\.o$']
 let NERDTreeWinSize = 20
 let NERDTreeDirArrows = 0
+
+" C++ includes
+iabbrev #a #include <algorithm>
+iabbrev #d #include <deque>
+iabbrev #i #include <iostream>
+iabbrev #l #include <limits>
+iabbrev #n #include <numeric>
+iabbrev #q #include <queue>
+iabbrev #r #include <random>
+iabbrev #u #include <utility>
+iabbrev #um #include <unordered_map>
+iabbrev #v #include <vector>
+iabbrev iuns using namespace std;
+iabbrev imain int main(int /*argc*/, char */*argv*/[]) {<cr>    return 0;<cr>}
 
 " Suggested
 "syntax on
