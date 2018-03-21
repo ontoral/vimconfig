@@ -64,8 +64,8 @@ iabbrev #s #include <string>
 iabbrev #u #include <utility>
 iabbrev #v #include <vector>
 
-iabbrev insp using namespace std;
-iabbrev imain int main(int /*argc*/, char */*argv*/[]) {<cr>    return 0;<cr>}
+iabbrev istd using namespace std;
+iabbrev imain int main(int /*argc*/, char */*argv*/[]) {<cr>return 0;<cr>}
 
 function! s:ExecuteInShell(command)
   let command = join(map(split(a:command), 'expand(v:val)'))
