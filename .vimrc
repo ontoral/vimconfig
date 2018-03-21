@@ -14,13 +14,14 @@ set smartindent
 
 " Syntax, colors, and fonts
 set bg=dark
-set syntax=python
+syntax on
 
 " Window embellishments
 set modeline
 set ls=2
 set ruler
 set number
+set colorcolumn=78
 
 " Editor behavior
 set hidden
@@ -43,25 +44,20 @@ execute pathogen#infect()
 
 " NERDTree
 autocmd vimenter * NERDTree
-let NERDTreeIgnore = ['\~$', '\.pyc[[file]]']
+let NERDTreeIgnore = ['\~$', '\.pyc[[file]]', '\.o$']
 let NERDTreeWinSize = 20
 let NERDTreeDirArrows = 0
 
-" Suggested
-"syntax on
-"filetype plugin indent on
-
-" Abbreviations
+" C++ includes
 iabbrev #a #include <algorithm>
 iabbrev #d #include <deque>
-iabbrev #f #include <functional>
 iabbrev #i #include <iostream>
 iabbrev #l #include <limits>
 iabbrev #n #include <numeric>
 iabbrev #q #include <queue>
 iabbrev #r #include <random>
-iabbrev #s #include <string>
 iabbrev #u #include <utility>
+iabbrev #m #include <unordered_map>
 iabbrev #v #include <vector>
 
 iabbrev istd using namespace std;
