@@ -77,7 +77,7 @@ iabbrev #u #include <utility>
 iabbrev #m #include <unordered_map>
 iabbrev #v #include <vector>
 iabbrev istd using namespace std;
-iabbrev imain int main(int /*argc*/, char */*argv*/[]) {<cr>    return 0;<cr>}
+iabbrev imain int main(int /*argc*/, char */*argv*/[]) {<cr>return 0;<cr>}
 
 " Using 'make' and automated building
 " Add some mappings to simplify Makefile usage
