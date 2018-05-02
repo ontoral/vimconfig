@@ -62,6 +62,7 @@ autocmd vimenter * NERDTree
 let NERDTreeIgnore = ['\~$', '\.pyc[[file]]', '\.o$']
 let NERDTreeWinSize = 20
 let NERDTreeDirArrows = 0
+nmap <leader>, :NERDTreeToggle<cr>
 
 " C++ includes and snippets
 " Typing these while inputting C++ will speed things up.
