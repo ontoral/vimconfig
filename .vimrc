@@ -47,12 +47,22 @@ set wildmenu
 " Map the standard cursor movements h,j,k,l to window movements by holding
 " down Ctrl... Ctrl+h,Ctrl+j,Ctrl+k,Ctrl+l.
 " Put tab movements left and right on Ctrl+n and Ctrl+m.
-map <C-H> <C-W>h
-map <C-L> <C-W>l
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-N> gT
-map <C-M> gt
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-N> gT
+nnoremap <C-M> gt
+
+" Control-keys while editing
+" Insert from beginning of line
+inoremap <C-A> <esc>I  
+" Append at end of line
+inoremap <C-E> <esc>A
+" Delete current line and continue editing
+inoremap <C-K> <esc>ddi
+" Capitalize current word and continue editing
+inoremap <C-U> <esc>bveUea
 
 " Pathogen... a Package Manager
 execute pathogen#infect()
@@ -62,17 +72,22 @@ autocmd vimenter * NERDTree
 let NERDTreeIgnore = ['\~$', '\.pyc[[file]]', '\.o$']
 let NERDTreeWinSize = 20
 let NERDTreeDirArrows = 0
+nnoremap <leader>, :NERDTreeToggle<cr>
 
+" TODO make these only active in .cpp, .h, and .hpp files
 " C++ includes and snippets
 " Typing these while inputting C++ will speed things up.
 iabbrev #" #include "_"
 iabbrev #a #include <algorithm>
 iabbrev #d #include <deque>
 iabbrev #i #include <iostream>
+iabbrev #g #include "getopt.h"
 iabbrev #l #include <limits>
 iabbrev #n #include <numeric>
+iabbrev #p #include <priority_queue>
 iabbrev #q #include <queue>
 iabbrev #r #include <random>
+iabbrev #s #include <string>
 iabbrev #u #include <utility>
 iabbrev #m #include <unordered_map>
 iabbrev #v #include <vector>
