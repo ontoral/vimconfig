@@ -9,6 +9,8 @@ nnoremap <leader>sgv :source $MYGVIMRC<cr>
 " Window properties and fonts
 set lines=40
 set columns=132
-set guifont=M+\ 1m\ Regular:h18
+set macligatures
+"set guifont=M+\ 1m\ Regular:h18
+set guifont=FuraCodeNerdFontComplete-Regular:h18
 set colorcolumn=78
 colorscheme slate
