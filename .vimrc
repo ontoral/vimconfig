@@ -43,6 +43,9 @@ set wildmode=longest,list,full
 set wildmenu
 set updatetime=100
 
+" Shortcut for commenting code
+noremap <leader>/ :Commentary<cr>
+
 " Movement between windows
 " It's easy enough to hit Ctrl+w,h, but Ctrl+h is easier!
 " Map the standard cursor movements h,j,k,l to window movements by holding
