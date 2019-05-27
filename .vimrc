@@ -34,13 +34,14 @@ set number
 set colorcolumn=78
 
 " Editor behavior
-" Tweak buffer, backspace, and tab-completion behaviors.
+" Tweak buffer, backspace, tab-completion, and screen update behaviors.
 set hidden
 set showmatch
 set showmode
 set backspace=indent,eol,start
 set wildmode=longest,list,full
 set wildmenu
+set updatetime=100
 
 " Movement between windows
 " It's easy enough to hit Ctrl+w,h, but Ctrl+h is easier!
@@ -80,6 +81,7 @@ nnoremap <leader>, :NERDTreeToggle<cr>
 iabbrev #" #include "_"
 iabbrev #a #include <algorithm>
 iabbrev #d #include <deque>
+iabbrev #f #include <fstream>
 iabbrev #i #include <iostream>
 iabbrev #g #include "getopt.h"
 iabbrev #l #include <limits>
@@ -88,6 +90,7 @@ iabbrev #p #include <priority_queue>
 iabbrev #q #include <queue>
 iabbrev #r #include <random>
 iabbrev #s #include <string>
+iabbrev #t #include <tuple>
 iabbrev #u #include <utility>
 iabbrev #m #include <unordered_map>
 iabbrev #v #include <vector>
@@ -113,6 +116,8 @@ function! Build()
 endfunction
 nnoremap <leader>b :call Build()<cr>
 
+" For git
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Executing shell commands
 " You can already use :!<command> to send commands to the shell.
