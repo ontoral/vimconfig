@@ -20,10 +20,14 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
+set textwidth=77
 
 " Syntax highlighting, colors, and fonts
 set bg=dark
 syntax on
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+highlight nonascii guibg=Red ctermbg=1 term=standout
+au BufReadPost * syntax match nonascii "[^\u0000-\u007F]"
 
 " Window embellishments
 " Handle things like rulers, line numbering, and the modeline below.
@@ -72,7 +76,9 @@ inoremap <C-U> <esc>bveUea
 execute pathogen#infect()
 
 " NERDTree... a file/directory browser inside vim
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd vimenter * if !argc() | NERDTree | endif
 let NERDTreeIgnore = ['\~$', '\.pyc[[file]]', '\.o$']
 let NERDTreeWinSize = 20
 let NERDTreeDirArrows = 0
